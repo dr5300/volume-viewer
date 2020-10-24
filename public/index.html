@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Volume Viewer</title>
+    <link rel="icon" type="image/png" href="./favicon.png"/>
+    <link rel="stylesheet" type="text/css" href="./lib/rendercore/common/style.css">
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+
+    <script type="text/javascript" src="./lib/dat-gui/dat.gui.min.js"></script>
+
+    <script type="text/javascript" src="./ScannerVolume.js"></script>
+    <script type="text/javascript" src="./Segment.js"></script>
+    <script type="text/javascript" src="./SegmentationVolume.js"></script>
+
+    <script type="text/javascript" src="./ServerScannerVolume.js"></script>
+    <script type="text/javascript" src="./ServerSegment.js"></script>
+    <script type="text/javascript" src="./ServerSegmentationVolume.js"></script>
+
+
+    <script type="text/javascript" src="./MarchingCubesWorker.js"></script>
+    <script type="text/javascript" src="./XMLHttpRequestMeta.js"></script>
+    <script type="module" src="./main.js"></script>
+</head>
+<body>
+
+<div id="loaderOverlay" style="display: none">
+    <div class="loader-container">
+        <div class="loader"></div>
+    </div>
+    <div id="loaderMessage"></div>
+</div>
+
+<input id="scannerVolumeInfoFileInput" type="file" accept=".json" style="display: none">
+<input id="scannerVolumeDataFileInput" type="file" style="display: none">
+
+<input id="segmentationVolumeInfoFileInput" type="file" accept=".json" style="display: none">
+<input id="segmentationVolumeDataFileInput" type="file" style="display: none">
+
+<a id="scannerVolumeExportLink" download="" style="display: none"></a>
+<a id="segmentationVolumeExportLink" download="" style="display: none"></a>
+
+<canvas id="canvas"></canvas>
+
+<div id="view3DCover"></div>
+<label id="axisXLabel">X axis</label>
+<label id="axisYLabel">Y axis</label>
+<label id="axisZLabel">Z axis</label>
+<label id="view3DLabel">3D view</label>
+
+</body>
+</html>
